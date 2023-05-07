@@ -28,5 +28,6 @@ namespace CrudOperations
 
         //migration=göç tüm kodları yazdım uygulama tarafında veritabı tarafında bir göç başlatıyorum
         //add-migration buna isim vermem lazım add-migration one
+        //sonra update-database ile migrationu uyguladı
     }
 }
