@@ -18,7 +18,7 @@ namespace CrudOperations
             set { _createdDate= value; }
         }
 
-        public DateTime? UpdateDate { get; set; }
+        public DateTime? UpdateDate { get; set; }// ? ilgili prop klon olarak oluşturulurken NULLABLE işaretlensin
         public DateTime? DeleteDate { get; set; }
 
         private Statu _statu=Statu.Active;
