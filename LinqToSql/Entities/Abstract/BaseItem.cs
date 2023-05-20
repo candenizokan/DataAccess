@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinqToSql.Entities.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,13 @@ namespace LinqToSql.Entities.Abstract
         public DateTime? UpdateDate { get; set; }
         public DateTime? DeleteDate { get; set; }
 
-        
+        private Statu _statu=Statu.Active;
+
+        public Statu Statu
+        {
+            get { return _statu; }
+            set { _statu = value; }
+        }
+
     }
 }

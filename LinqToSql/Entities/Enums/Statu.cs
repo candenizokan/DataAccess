@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinqToSql.Entities.Enums
 {
-    internal enum Statu
+    public enum Statu
     {
         Active=1,
         Modified,
