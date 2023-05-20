@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CrudOperations
 {
+    //veritabanı ile konuşan sınıf. bunu dbcontexten kalıtım alıyorum.
     internal class AppDbContext:DbContext
     {
 
