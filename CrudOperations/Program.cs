@@ -108,15 +108,15 @@ namespace CrudOperations
 
 
             #region Delete
-            using (var db = new AppDbContext())
-            {
-                var silinecekNesne = db.Categories.Find(1);
-                silinecekNesne.DeleteDate = DateTime.Now;
-                silinecekNesne.Statu = Statu.Passive;
+            //using (var db = new AppDbContext())
+            //{
+            //    var silinecekNesne = db.Categories.Find(1);
+            //    silinecekNesne.DeleteDate = DateTime.Now;
+            //    silinecekNesne.Statu = Statu.Passive;
 
-                db.Categories.Update(silinecekNesne);
-                db.SaveChanges();
-            }
+            //    db.Categories.Update(silinecekNesne);
+            //    db.SaveChanges();
+            //}
 
             using (var db = new AppDbContext())
             {
