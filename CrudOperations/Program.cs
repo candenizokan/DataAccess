@@ -82,28 +82,43 @@ namespace CrudOperations
             #endregion
 
             #region Update
+            //using (var db = new AppDbContext())
+            //{
+            //    var nesne = db.Categories.Find(2);
+            //    //var nesne2 = db.Categories.Where(a => a.ID == 2);
+
+            //    nesne.Name = "Kozmetik";
+            //    nesne.Description = "Raflarda..";
+            //    nesne.Statu = Statu.Modified;
+            //    nesne.UpdateDate = DateTime.Now;
+
+            //    db.Categories.Update(nesne);
+
+            //    var nesne2 = db.Categories.Find(1);
+            //    nesne2.Name = "Tatlılar";
+            //    nesne2.Statu = Statu.Modified;
+            //    nesne2.UpdateDate = DateTime.Now;
+
+            //    db.Categories.Update(nesne2);
+
+            //    db.SaveChanges();
+
+            //} 
+            #endregion
+
+
+            #region Delete
             using (var db = new AppDbContext())
             {
-                var nesne = db.Categories.Find(2);
-                //var nesne2 = db.Categories.Where(a => a.ID == 2);
+                var silinecekNesne = db.Categories.Find(1);
+                silinecekNesne.DeleteDate = DateTime.Now;
+                silinecekNesne.Statu = Statu.Passive;
 
-                nesne.Name = "Kozmetik";
-                nesne.Description = "Raflarda..";
-                nesne.Statu = Statu.Modified;
-                nesne.UpdateDate = DateTime.Now;
-
-                db.Categories.Update(nesne);
-
-                var nesne2 = db.Categories.Find(1);
-                nesne2.Name = "Tatlılar";
-                nesne2.Statu = Statu.Modified;
-                nesne2.UpdateDate = DateTime.Now;
-
-                db.Categories.Update(nesne2);
-
+                db.Categories.Update(silinecekNesne);
                 db.SaveChanges();
+            }
 
-            } 
+            
             #endregion
 
         }
