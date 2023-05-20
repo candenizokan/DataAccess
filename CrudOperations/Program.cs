@@ -54,30 +54,57 @@ namespace CrudOperations
             //    db.SaveChanges();
 
             //    Console.ReadLine();
-            //} 
+            //}
             #endregion
 
+            #region Read
+            //using (var db = new AppDbContext())
+            //{
+            //    var list = db.Categories.ToList();
+
+            //    foreach (var item in list)
+            //    {
+            //        Console.WriteLine(item.ID + "***" + item.Name);
+            //    }
+
+            //    var list2 = db.Categories.Where(a => a.ID < 2).ToList();
+
+            //    var list3 = db.Categories.Where(a => a.Statu == Statu.Active)
+            //                             .Select(a => new { a.ID, a.Name }).ToList();
+
+            //    foreach (var item in list3)
+            //    {
+            //        Console.WriteLine(item.ID + "***" + item.Name);//list 3 te selet ettiğin için sadece ikisini getirebilirsin. categorideki her eşyi getiremezsin. örneğin item.Description getiremezsin
+            //    }
+            //}
+
+            //Console.ReadLine(); 
+            #endregion
+
+            #region Update
             using (var db = new AppDbContext())
             {
-                var list = db.Categories.ToList();
+                var nesne = db.Categories.Find(2);
+                //var nesne2 = db.Categories.Where(a => a.ID == 2);
 
-                foreach (var item in list)
-                {
-                    Console.WriteLine(item.ID +"***" + item.Name);
-                }
+                nesne.Name = "Kozmetik";
+                nesne.Description = "Raflarda..";
+                nesne.Statu = Statu.Modified;
+                nesne.UpdateDate = DateTime.Now;
 
-                var list2 = db.Categories.Where(a => a.ID<2).ToList();
+                db.Categories.Update(nesne);
 
-                var list3 = db.Categories.Where(a=> a.Statu ==Statu.Active)
-                                         .Select(a=> new { a.ID, a.Name}).ToList();
+                var nesne2 = db.Categories.Find(1);
+                nesne2.Name = "Tatlılar";
+                nesne2.Statu = Statu.Modified;
+                nesne2.UpdateDate = DateTime.Now;
 
-                foreach (var item in list3)
-                {
-                    Console.WriteLine(item.ID + "***" + item.Name);//list 3 te selet ettiğin için sadece ikisini getirebilirsin. categorideki her eşyi getiremezsin. örneğin item.Description getiremezsin
-                }
-            }
+                db.Categories.Update(nesne2);
 
-            Console.ReadLine();
+                db.SaveChanges();
+
+            } 
+            #endregion
 
         }
     }
