@@ -22,6 +22,38 @@ namespace CrudOperations
              
              
              */
+
+            using (var db=new AppDbContext())
+            {
+                Category category = new Category();
+
+                category.Name = "Elektronik";
+                category.Description = "Çok pahalandı";
+
+                db.Categories.Add(category);
+                int result = db.SaveChanges();
+
+                if (result>0)
+                {
+                    Console.WriteLine("Ekleme işlemi başarılı");
+                }
+                else
+                {
+                    Console.WriteLine("Ekleme işlemi başarısız.");
+                }
+
+                Category category1 = new Category()
+                {
+                    Name = "Sebze",
+                    Description = "Manav reyonu"
+                };
+                
+                
+                db.Categories.Add(category1);
+                db.SaveChanges();
+
+                Console.ReadLine();
+            }
         }
     }
 }
