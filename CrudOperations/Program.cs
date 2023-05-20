@@ -118,7 +118,12 @@ namespace CrudOperations
                 db.SaveChanges();
             }
 
-            
+            using (var db = new AppDbContext())
+            {
+                var nesne = db.Categories.Find(4);
+                db.Categories.Remove(nesne);
+                db.SaveChanges();
+            }
             #endregion
 
         }
