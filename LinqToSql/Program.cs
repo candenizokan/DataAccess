@@ -34,28 +34,49 @@ namespace LinqToSql
 
 
 
+            #region WHERE
+            //using (var db = new AppContext())
+            //{
+            //    //Where
+            //    //birim fiyatı 30-90 arasında olan kitapların sadece isim ve fiyat bilgisini alıp basınız.
+
+            //    var list = db.Books.Where(a => a.Price < 90 && a.Price > 30).Select(a => new { a.Title, a.Price }).ToList();
+
+            //    foreach (var item in list)
+            //    {
+            //        Console.WriteLine(item.Title + " * " + item.Price);
+            //    }
+
+            //    // ismi a ile başlayan yazarları getiriniz
+
+            //    var list2 = db.Authors.Where(a => a.FirstName.StartsWith("A")).ToList();
+
+            //    //türü syh olan kitapları getiriniz
+
+            //    var list3 = db.Books.Where(a => a.GendreId == "syh").ToList();
+
+            //    Console.ReadLine();
+            //} 
+            #endregion
+
+
+            #region ORDER BY
             using (var db = new AppContext())
             {
-                //Where
-                //birim fiyatı 30-90 arasında olan kitapların sadece isim ve fiyat bilgisini alıp basınız.
+                // order by-- azdan çoka, a'dan zye, yakından uzak tarihe sıralama yapar.
+                // order bydescending -- çoktan az, z'den a'ya, uzaktan yakın tarihi, vb sıralama yapar
 
-                var list = db.Books.Where(a=> a.Price<90 && a.Price > 30).Select(a => new {a.Title, a.Price}).ToList();
 
-                foreach (var item in list)
-                {
-                    Console.WriteLine(item.Title+" * "+item.Price);
-                }
+                //id bilgisi 8-15 arasında olan (sınıfrlar dahil) yazarlar adlarına göre a dan z ye sıralayınız.
 
-                // ismi a ile başlayan yazarları getiriniz
+                var list = db.Authors.Where(a => a.Id <= 15 && a.Id >= 8).OrderBy(a => a.FirstName).ToList();
 
-                var list2 = db.Authors.Where(a=> a.FirstName.StartsWith("A")).ToList();
+                // fiyatı 120 tl'den büyük kitapları pahalıdan ucuza sıralayıp yalnızca fiyat ve başlık kolonlarını seçiniz
 
-                //türü syh olan kitapları getiriniz
+                var list2 = db.Books.Where(a => a.Price > 120).Select(a => new { a.Price, a.Title }).OrderByDescending(a => a.Price).ToList();
+            } 
+            #endregion
 
-                var list3 = db.Books.Where(a => a.GendreId == "syh").ToList();
-
-                Console.ReadLine();
-            }
         }
     }
 }
