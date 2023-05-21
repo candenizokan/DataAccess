@@ -13,7 +13,15 @@ namespace LinqToSql.Infastructure.SeedData
     {
         public void Configure(EntityTypeBuilder<Gendre> builder)
         {
-            throw new NotImplementedException();
+            builder.HasData
+                (
+                    new Gendre { Id = "kor",Name ="Korku"},
+                    new Gendre { Id = "psk",Name ="Psikoloji"},
+                    new Gendre { Id = "mcr",Name ="Macera"},
+                    new Gendre { Id = "syh",Name ="Seyehat"},
+                    new Gendre { Id = "blm",Name ="Bilim"}
+                
+                );
         }
     }
 }
