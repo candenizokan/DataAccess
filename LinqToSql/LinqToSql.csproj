@@ -172,6 +172,11 @@
     <Compile Include="Infastructure\SeedData\SeedBook.cs" />
     <Compile Include="Infastructure\SeedData\SeedBookAuthor.cs" />
     <Compile Include="Infastructure\SeedData\SeedGenre.cs" />
+    <Compile Include="Migrations\20230521092751_one.cs" />
+    <Compile Include="Migrations\20230521092751_one.designer.cs">
+      <DependentUpon>20230521092751_one.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\AppContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
