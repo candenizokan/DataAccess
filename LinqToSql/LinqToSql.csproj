@@ -165,6 +165,7 @@
     <Compile Include="Entities\Enums\Statu.cs" />
     <Compile Include="Infastructure\SeedData\SeedAuthor.cs" />
     <Compile Include="Infastructure\SeedData\SeedBook.cs" />
+    <Compile Include="Infastructure\SeedData\SeedBookAuthor.cs" />
     <Compile Include="Infastructure\SeedData\SeedGenre.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
