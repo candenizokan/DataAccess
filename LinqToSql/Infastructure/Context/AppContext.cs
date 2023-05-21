@@ -51,6 +51,7 @@ namespace LinqToSql.Infastructure.Context
             modelBuilder.ApplyConfiguration(new SeedBookAuthor());
             modelBuilder.ApplyConfiguration(new SeedGenre());
            
+            //add-migration komutunu anlayan paket var. onu nugetten almam lazım ef core tools
 
             base.OnModelCreating(modelBuilder);
         }
