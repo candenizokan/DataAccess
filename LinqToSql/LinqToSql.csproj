@@ -165,6 +165,7 @@
     <Compile Include="Entities\Concrete\Author.cs" />
     <Compile Include="Entities\Concrete\Book.cs" />
     <Compile Include="Entities\Concrete\BookAuthor.cs" />
+    <Compile Include="Entities\Concrete\Calisan.cs" />
     <Compile Include="Entities\Concrete\Gendre.cs" />
     <Compile Include="Entities\Enums\Statu.cs" />
     <Compile Include="Infastructure\Context\AppContext.cs" />
