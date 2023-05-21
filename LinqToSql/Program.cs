@@ -17,20 +17,45 @@ namespace LinqToSql
             //LinqToSql
 
             #region Select
+            //using (var db = new AppContext())
+            //{
+            //    //tüm yazarları getirelim
+
+            //    var list = db.Authors.ToList();
+
+            //    //SELECT => seçim yapar. ilgili tablodan yalnızca yazdığımız kolonları seçer.
+
+            //    var list2 = db.Authors.Select(a => new { a.Id, a.Statu, a.FirstName }).ToList();
+
+            //    //daha küçük bir protatip gibi sunabilirim.
+            //    var list3 = db.Authors.Select(a => new Calisan { Ad = a.FirstName, Soyad = a.LastName }).ToList();
+            //} 
+            #endregion
+
+
+
             using (var db = new AppContext())
             {
-                //tüm yazarları getirelim
+                //Where
+                //birim fiyatı 30-90 arasında olan kitapların sadece isim ve fiyat bilgisini alıp basınız.
 
-                var list = db.Authors.ToList();
+                var list = db.Books.Where(a=> a.Price<90 && a.Price > 30).Select(a => new {a.Title, a.Price}).ToList();
 
-                //SELECT => seçim yapar. ilgili tablodan yalnızca yazdığımız kolonları seçer.
+                foreach (var item in list)
+                {
+                    Console.WriteLine(item.Title+" * "+item.Price);
+                }
 
-                var list2 = db.Authors.Select(a => new { a.Id, a.Statu, a.FirstName }).ToList();
+                // ismi a ile başlayan yazarları getiriniz
 
-                //daha küçük bir protatip gibi sunabilirim.
-                var list3 = db.Authors.Select(a => new Calisan { Ad = a.FirstName, Soyad = a.LastName }).ToList();
-            } 
-            #endregion
+                var list2 = db.Authors.Where(a=> a.FirstName.StartsWith("A")).ToList();
+
+                //türü syh olan kitapları getiriniz
+
+                var list3 = db.Books.Where(a => a.GendreId == "syh").ToList();
+
+                Console.ReadLine();
+            }
         }
     }
 }
