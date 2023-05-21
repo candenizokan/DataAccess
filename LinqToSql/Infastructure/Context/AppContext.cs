@@ -1,4 +1,5 @@
 ﻿using LinqToSql.Entities.Concrete;
+using LinqToSql.Infastructure.SeedData;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -45,7 +46,10 @@ namespace LinqToSql.Infastructure.Context
 
 
 
-
+            modelBuilder.ApplyConfiguration(new SeedAuthor());
+            modelBuilder.ApplyConfiguration(new SeedBook());
+            modelBuilder.ApplyConfiguration(new SeedBookAuthor());
+            modelBuilder.ApplyConfiguration(new SeedGenre());
            
 
             base.OnModelCreating(modelBuilder);
