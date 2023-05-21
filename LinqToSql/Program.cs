@@ -10,6 +10,8 @@ namespace LinqToSql
     {
         static void Main(string[] args)
         {
+
+            //LinqToSql
         }
     }
 }

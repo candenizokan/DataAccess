@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LinqToSql.Migrations
 {
-    public partial class one : Migration
+    public partial class oney : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -95,16 +95,16 @@ namespace LinqToSql.Migrations
                 columns: new[] { "Id", "CreatedDate", "DeleteDate", "FirstName", "LastName", "Statu", "UpdateDate" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Ali", "Yılmaz", 1, null },
-                    { 2, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Cevat", "Fırtına", 1, null },
-                    { 3, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Ayşe", "Kırmızı", 1, null },
-                    { 4, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Ömer", "Seyfettin", 1, null },
-                    { 5, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Can", "Yücel", 1, null },
-                    { 6, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Mehmet", "Kaş", 1, null },
-                    { 7, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Hakan", "Yaşar", 1, null },
-                    { 8, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Celal", "Kaya", 1, null },
-                    { 9, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "İpek", "Bilgin", 1, null },
-                    { 10, new DateTime(2023, 5, 21, 12, 27, 50, 762, DateTimeKind.Local).AddTicks(1150), null, "Ece", "Biricik", 1, null }
+                    { 1, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "Ali", "Yılmaz", 1, null },
+                    { 2, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "Cevat", "Fırtına", 1, null },
+                    { 3, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "Ayşe", "Kırmızı", 1, null },
+                    { 4, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "Ömer", "Seyfettin", 1, null },
+                    { 5, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "Can", "Yücel", 1, null },
+                    { 6, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "Mehmet", "Kaş", 1, null },
+                    { 7, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "Hakan", "Yaşar", 1, null },
+                    { 8, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "Celal", "Kaya", 1, null },
+                    { 9, new DateTime(2023, 5, 21, 12, 35, 3, 910, DateTimeKind.Local).AddTicks(6582), null, "İpek", "Bilgin", 1, null },
+                    { 10, new DateTime(2023, 5, 21, 12, 35, 3, 911, DateTimeKind.Local).AddTicks(6584), null, "Ece", "Biricik", 1, null }
                 });
 
             migrationBuilder.InsertData(
@@ -112,11 +112,11 @@ namespace LinqToSql.Migrations
                 columns: new[] { "Id", "CreatedDate", "DeleteDate", "Name", "Statu", "UpdateDate" },
                 values: new object[,]
                 {
-                    { "kor", new DateTime(2023, 5, 21, 12, 27, 50, 881, DateTimeKind.Local).AddTicks(277), null, "Korku", 1, null },
-                    { "psk", new DateTime(2023, 5, 21, 12, 27, 50, 881, DateTimeKind.Local).AddTicks(277), null, "Psikoloji", 1, null },
-                    { "mcr", new DateTime(2023, 5, 21, 12, 27, 50, 881, DateTimeKind.Local).AddTicks(277), null, "Macera", 1, null },
-                    { "syh", new DateTime(2023, 5, 21, 12, 27, 50, 881, DateTimeKind.Local).AddTicks(277), null, "Seyehat", 1, null },
-                    { "blm", new DateTime(2023, 5, 21, 12, 27, 50, 881, DateTimeKind.Local).AddTicks(277), null, "Bilim", 1, null }
+                    { "kor", new DateTime(2023, 5, 21, 12, 35, 4, 52, DateTimeKind.Local).AddTicks(5631), null, "Korku", 1, null },
+                    { "psk", new DateTime(2023, 5, 21, 12, 35, 4, 52, DateTimeKind.Local).AddTicks(5631), null, "Psikoloji", 1, null },
+                    { "mcr", new DateTime(2023, 5, 21, 12, 35, 4, 52, DateTimeKind.Local).AddTicks(5631), null, "Macera", 1, null },
+                    { "syh", new DateTime(2023, 5, 21, 12, 35, 4, 52, DateTimeKind.Local).AddTicks(5631), null, "Seyehat", 1, null },
+                    { "blm", new DateTime(2023, 5, 21, 12, 35, 4, 52, DateTimeKind.Local).AddTicks(5631), null, "Bilim", 1, null }
                 });
 
             migrationBuilder.InsertData(
@@ -124,22 +124,22 @@ namespace LinqToSql.Migrations
                 columns: new[] { "Id", "CreatedDate", "DeleteDate", "GendreId", "Price", "Statu", "Title", "UpdateDate" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "kor", 12.44, 1, "Ali bananın çiftliği", null },
-                    { 3, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "kor", 34.450000000000003, 1, "Susma Sanatı", null },
-                    { 6, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "kor", 56.677999999999997, 1, "Satranç", null },
-                    { 2, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "psk", 888.0, 1, "Uçurtma Avcisi", null },
-                    { 4, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "psk", 12.119999999999999, 1, "Siyah Lale", null },
-                    { 14, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "psk", 200.0, 1, "Kafaya Takma Sanatı", null },
-                    { 7, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "mcr", 88.0, 1, "Suç ve Ceza", null },
-                    { 8, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "mcr", 367.0, 1, "Yaprak Dökümü", null },
-                    { 13, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "mcr", 44.0, 1, "Beyaz Diş", null },
-                    { 10, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "syh", 99.989999999999995, 1, "Sırça Köşk", null },
-                    { 12, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "syh", 100.0, 1, "Beyaz Kale", null },
-                    { 16, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "syh", 289.0, 1, "Mai", null },
-                    { 5, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "blm", 244.0, 1, "Körlük", null },
-                    { 9, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "blm", 55.780000000000001, 1, "Uzay", null },
-                    { 11, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "blm", 56.219999999999999, 1, "Merhaba Dünya", null },
-                    { 15, new DateTime(2023, 5, 21, 12, 27, 50, 833, DateTimeKind.Local).AddTicks(763), null, "blm", 800.0, 1, "Bilge", null }
+                    { 1, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "kor", 12.44, 1, "Ali bananın çiftliği", null },
+                    { 3, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "kor", 34.450000000000003, 1, "Susma Sanatı", null },
+                    { 6, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "kor", 56.677999999999997, 1, "Satranç", null },
+                    { 2, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "psk", 888.0, 1, "Uçurtma Avcisi", null },
+                    { 4, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "psk", 12.119999999999999, 1, "Siyah Lale", null },
+                    { 14, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "psk", 200.0, 1, "Kafaya Takma Sanatı", null },
+                    { 7, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "mcr", 88.0, 1, "Suç ve Ceza", null },
+                    { 8, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "mcr", 367.0, 1, "Yaprak Dökümü", null },
+                    { 13, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "mcr", 44.0, 1, "Beyaz Diş", null },
+                    { 10, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "syh", 99.989999999999995, 1, "Sırça Köşk", null },
+                    { 12, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "syh", 100.0, 1, "Beyaz Kale", null },
+                    { 16, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "syh", 289.0, 1, "Mai", null },
+                    { 5, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "blm", 244.0, 1, "Körlük", null },
+                    { 9, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "blm", 55.780000000000001, 1, "Uzay", null },
+                    { 11, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "blm", 56.219999999999999, 1, "Merhaba Dünya", null },
+                    { 15, new DateTime(2023, 5, 21, 12, 35, 3, 989, DateTimeKind.Local).AddTicks(6000), null, "blm", 800.0, 1, "Bilge", null }
                 });
 
             migrationBuilder.InsertData(

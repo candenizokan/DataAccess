@@ -6,12 +6,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using AppContext = LinqToSql.Infastructure.Context.AppContext;
 
 namespace LinqToSql.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20230521092751_one")]
-    partial class one
+    [Migration("20230521093504_oney")]
+    partial class oney
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,7 +55,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Ali",
                             LastName = "Yılmaz",
                             Statu = 1
@@ -62,7 +63,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Cevat",
                             LastName = "Fırtına",
                             Statu = 1
@@ -70,7 +71,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Ayşe",
                             LastName = "Kırmızı",
                             Statu = 1
@@ -78,7 +79,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Ömer",
                             LastName = "Seyfettin",
                             Statu = 1
@@ -86,7 +87,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Can",
                             LastName = "Yücel",
                             Statu = 1
@@ -94,7 +95,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Mehmet",
                             LastName = "Kaş",
                             Statu = 1
@@ -102,7 +103,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Hakan",
                             LastName = "Yaşar",
                             Statu = 1
@@ -110,7 +111,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Celal",
                             LastName = "Kaya",
                             Statu = 1
@@ -118,7 +119,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "İpek",
                             LastName = "Bilgin",
                             Statu = 1
@@ -126,7 +127,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 170, DateTimeKind.Local).AddTicks(4310),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 355, DateTimeKind.Local).AddTicks(3870),
                             FirstName = "Ece",
                             LastName = "Biricik",
                             Statu = 1
@@ -173,7 +174,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "kor",
                             Price = 12.44,
                             Statu = 1,
@@ -182,7 +183,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "psk",
                             Price = 888.0,
                             Statu = 1,
@@ -191,7 +192,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "kor",
                             Price = 34.450000000000003,
                             Statu = 1,
@@ -200,7 +201,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "psk",
                             Price = 12.119999999999999,
                             Statu = 1,
@@ -209,7 +210,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "blm",
                             Price = 244.0,
                             Statu = 1,
@@ -218,7 +219,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "kor",
                             Price = 56.677999999999997,
                             Statu = 1,
@@ -227,7 +228,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "mcr",
                             Price = 88.0,
                             Statu = 1,
@@ -236,7 +237,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "mcr",
                             Price = 367.0,
                             Statu = 1,
@@ -245,7 +246,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "blm",
                             Price = 55.780000000000001,
                             Statu = 1,
@@ -254,7 +255,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "syh",
                             Price = 99.989999999999995,
                             Statu = 1,
@@ -263,7 +264,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "blm",
                             Price = 56.219999999999999,
                             Statu = 1,
@@ -272,7 +273,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "syh",
                             Price = 100.0,
                             Statu = 1,
@@ -281,7 +282,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 13,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "mcr",
                             Price = 44.0,
                             Statu = 1,
@@ -290,7 +291,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "psk",
                             Price = 200.0,
                             Statu = 1,
@@ -299,7 +300,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 15,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "blm",
                             Price = 800.0,
                             Statu = 1,
@@ -308,7 +309,7 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = 16,
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 358, DateTimeKind.Local).AddTicks(3853),
                             GendreId = "syh",
                             Price = 289.0,
                             Statu = 1,
@@ -456,35 +457,35 @@ namespace LinqToSql.Migrations
                         new
                         {
                             Id = "kor",
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 364, DateTimeKind.Local).AddTicks(4005),
                             Name = "Korku",
                             Statu = 1
                         },
                         new
                         {
                             Id = "psk",
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 364, DateTimeKind.Local).AddTicks(4005),
                             Name = "Psikoloji",
                             Statu = 1
                         },
                         new
                         {
                             Id = "mcr",
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 173, DateTimeKind.Local).AddTicks(4294),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 364, DateTimeKind.Local).AddTicks(4005),
                             Name = "Macera",
                             Statu = 1
                         },
                         new
                         {
                             Id = "syh",
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 178, DateTimeKind.Local).AddTicks(4263),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 364, DateTimeKind.Local).AddTicks(4005),
                             Name = "Seyehat",
                             Statu = 1
                         },
                         new
                         {
                             Id = "blm",
-                            CreatedDate = new DateTime(2023, 5, 21, 12, 27, 51, 178, DateTimeKind.Local).AddTicks(4263),
+                            CreatedDate = new DateTime(2023, 5, 21, 12, 35, 4, 364, DateTimeKind.Local).AddTicks(4005),
                             Name = "Bilim",
                             Statu = 1
                         });
