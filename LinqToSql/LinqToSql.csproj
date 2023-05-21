@@ -163,6 +163,7 @@
     <Compile Include="Entities\Concrete\BookAuthor.cs" />
     <Compile Include="Entities\Concrete\Gendre.cs" />
     <Compile Include="Entities\Enums\Statu.cs" />
+    <Compile Include="Infastructure\Context\AppContext.cs" />
     <Compile Include="Infastructure\SeedData\SeedAuthor.cs" />
     <Compile Include="Infastructure\SeedData\SeedBook.cs" />
     <Compile Include="Infastructure\SeedData\SeedBookAuthor.cs" />
