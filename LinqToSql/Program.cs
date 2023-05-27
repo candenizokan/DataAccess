@@ -120,13 +120,32 @@ namespace LinqToSql
             #endregion
 
             #region FIND
+            //using (var db = new AppContext())
+            //{
+            //    //FIND() => anahtar ifadeye göre filtreleme yaparak nesneyi bulur ve döndürür.
+
+            //    var genre = db.Gendres.Find("mcr");
+            //    var boog = db.Books.Find(1);
+            //    var book2 = db.Books.Find(600);
+            //} 
+            #endregion
+
+
+            #region Take
             using (var db = new AppContext())
             {
-                //FIND() => anahtar ifadeye göre filtreleme yaparak nesneyi bulur ve döndürür.
+                //TAKE(n) => almak, n: kaç adet eleman alınacak
 
-                var genre = db.Gendres.Find("mcr");
-                var boog = db.Books.Find(1);
-                var book2 = db.Books.Find(600);
+                //Fiyatı en yüksek olan 5 kitabı bulunuz ve sadece kitap adı ve fiyatını desc olarak sıralı getiriniz.
+
+                var list = db.Books.Take(5).OrderByDescending(a => a.Price).Select(a => new { a.Title, a.Price }).ToList();
+
+                foreach (var item in list)
+                {
+                    Console.WriteLine(item.Title + " * " + item.Price);
+                }
+
+                Console.ReadLine();
             } 
             #endregion
 
