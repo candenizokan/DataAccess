@@ -104,6 +104,18 @@ namespace LinqToSql
 
                 var list10 = db.Books.Where(a => a.Price == 56.22).SingleOrDefault();
                 var list11 = db.Books.Where(a => a.Price == 56.22).Single();
+
+                try
+                {
+                    //hata alacağını düşündüğümüz kodları try içine 
+                    var book = db.Books.First(a => a.Price == -80);
+                    Console.WriteLine($"{book.Id} - {book.Title}");
+                }
+                catch (Exception ex)
+                {
+                    //hata alındığında çalışacak kodları catch bloğu içine yaz.
+                    Console.WriteLine("her hangi bir kayıt bulunamadi {0}", ex.Message);
+                }
             } 
             #endregion
 
