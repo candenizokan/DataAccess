@@ -61,20 +61,20 @@ namespace LinqToSql
 
 
             #region ORDER BY
-            using (var db = new AppContext())
-            {
-                // order by-- azdan çoka, a'dan zye, yakından uzak tarihe sıralama yapar.
-                // order bydescending -- çoktan az, z'den a'ya, uzaktan yakın tarihi, vb sıralama yapar
+            //using (var db = new AppContext())
+            //{
+            //    // order by-- azdan çoka, a'dan zye, yakından uzak tarihe sıralama yapar.
+            //    // order bydescending -- çoktan az, z'den a'ya, uzaktan yakın tarihi, vb sıralama yapar
 
 
-                //id bilgisi 8-15 arasında olan (sınıfrlar dahil) yazarlar adlarına göre a dan z ye sıralayınız.
+            //    //id bilgisi 8-15 arasında olan (sınıfrlar dahil) yazarlar adlarına göre a dan z ye sıralayınız.
 
-                var list = db.Authors.Where(a => a.Id <= 15 && a.Id >= 8).OrderBy(a => a.FirstName).ToList();
+            //    var list = db.Authors.Where(a => a.Id <= 15 && a.Id >= 8).OrderBy(a => a.FirstName).ToList();
 
-                // fiyatı 120 tl'den büyük kitapları pahalıdan ucuza sıralayıp yalnızca fiyat ve başlık kolonlarını seçiniz
+            //    // fiyatı 120 tl'den büyük kitapları pahalıdan ucuza sıralayıp yalnızca fiyat ve başlık kolonlarını seçiniz
 
-                var list2 = db.Books.Where(a => a.Price > 120).Select(a => new { a.Price, a.Title }).OrderByDescending(a => a.Price).ToList();
-            } 
+            //    var list2 = db.Books.Where(a => a.Price > 120).Select(a => new { a.Price, a.Title }).OrderByDescending(a => a.Price).ToList();
+            //} 
             #endregion
 
         }
