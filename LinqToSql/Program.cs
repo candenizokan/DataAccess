@@ -79,43 +79,54 @@ namespace LinqToSql
 
 
             #region First,single,default
+            //using (var db = new AppContext())
+            //{
+            //    // FIRST() => tablodaki ilk kaydı getirir. getirebileceği bir kayıt yoksa hata fırlatır.
+            //    // FIRSTORDEFAULT() => tablodaki ilk kaydı getirir ama kayıt yoksa hata vermez.
+
+            //    // SINGLE() => tablodaki şartı sağlayan ilk kaydı getirir ANCAK FIRST() den farklı olarak şartı sağlayan tek nesne olmasını ister. Tek nesne yoksa yada birden fazla nesne varsa hata verir.
+
+            //    // SINGLEORDEFAULT() => şartı sağlayan tek nesneyi döndürür ancak yoksa hata vermez default değer döndürür. Çok nesne varsa da hata verir
+
+            //    var list = db.Books.First();
+
+            //    var list2 = db.Books.Where(a => a.Price < 100 && a.Price > 30).First();
+            //    var list3 = db.Books.Where(a => a.Price < 10000 && a.Price > 3000).First();
+
+            //    var list4 = db.Books.Where(a => a.Price < 100 && a.Price > 30).FirstOrDefault();
+            //    var list5 = db.Books.Where(a => a.Price < 10000 && a.Price > 3000).FirstOrDefault();
+
+            //    var list6 = db.Books.Where(a => a.Price < 100 && a.Price > 30).Single();
+            //    var list7 = db.Books.Where(a => a.Price < 10000 && a.Price > 3000).Single();
+
+            //    var list8 = db.Books.Where(a => a.Price < 100 && a.Price > 30).SingleOrDefault();
+            //    var list9 = db.Books.Where(a => a.Price < 10000 && a.Price > 3000).SingleOrDefault();
+
+            //    var list10 = db.Books.Where(a => a.Price == 56.22).SingleOrDefault();
+            //    var list11 = db.Books.Where(a => a.Price == 56.22).Single();
+
+            //    try
+            //    {
+            //        //hata alacağını düşündüğümüz kodları try içine 
+            //        var book = db.Books.First(a => a.Price == -80);
+            //        Console.WriteLine($"{book.Id} - {book.Title}");
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        //hata alındığında çalışacak kodları catch bloğu içine yaz.
+            //        Console.WriteLine("her hangi bir kayıt bulunamadi {0}", ex.Message);
+            //    }
+            //} 
+            #endregion
+
+            #region FIND
             using (var db = new AppContext())
             {
-                // FIRST() => tablodaki ilk kaydı getirir. getirebileceği bir kayıt yoksa hata fırlatır.
-                // FIRSTORDEFAULT() => tablodaki ilk kaydı getirir ama kayıt yoksa hata vermez.
+                //FIND() => anahtar ifadeye göre filtreleme yaparak nesneyi bulur ve döndürür.
 
-                // SINGLE() => tablodaki şartı sağlayan ilk kaydı getirir ANCAK FIRST() den farklı olarak şartı sağlayan tek nesne olmasını ister. Tek nesne yoksa yada birden fazla nesne varsa hata verir.
-
-                // SINGLEORDEFAULT() => şartı sağlayan tek nesneyi döndürür ancak yoksa hata vermez default değer döndürür. Çok nesne varsa da hata verir
-
-                var list = db.Books.First();
-
-                var list2 = db.Books.Where(a => a.Price < 100 && a.Price > 30).First();
-                var list3 = db.Books.Where(a => a.Price < 10000 && a.Price > 3000).First();
-
-                var list4 = db.Books.Where(a => a.Price < 100 && a.Price > 30).FirstOrDefault();
-                var list5 = db.Books.Where(a => a.Price < 10000 && a.Price > 3000).FirstOrDefault();
-
-                var list6 = db.Books.Where(a => a.Price < 100 && a.Price > 30).Single();
-                var list7 = db.Books.Where(a => a.Price < 10000 && a.Price > 3000).Single();
-
-                var list8 = db.Books.Where(a => a.Price < 100 && a.Price > 30).SingleOrDefault();
-                var list9 = db.Books.Where(a => a.Price < 10000 && a.Price > 3000).SingleOrDefault();
-
-                var list10 = db.Books.Where(a => a.Price == 56.22).SingleOrDefault();
-                var list11 = db.Books.Where(a => a.Price == 56.22).Single();
-
-                try
-                {
-                    //hata alacağını düşündüğümüz kodları try içine 
-                    var book = db.Books.First(a => a.Price == -80);
-                    Console.WriteLine($"{book.Id} - {book.Title}");
-                }
-                catch (Exception ex)
-                {
-                    //hata alındığında çalışacak kodları catch bloğu içine yaz.
-                    Console.WriteLine("her hangi bir kayıt bulunamadi {0}", ex.Message);
-                }
+                var genre = db.Gendres.Find("mcr");
+                var boog = db.Books.Find(1);
+                var book2 = db.Books.Find(600);
             } 
             #endregion
 
