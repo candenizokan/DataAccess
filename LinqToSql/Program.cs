@@ -150,24 +150,74 @@ namespace LinqToSql
             #endregion
 
             #region Any
+            //using (var db = new AppContext())
+            //{
+            //    //ANY => parantezleri içine yazılan expression sağlanıyorsa true sağlanmıyorsa false döner
+
+            //    var result = db.Gendres.Any(a => a.Id == "abs");//var mı
+            //    var result2 = db.Gendres.Any(a => a.Id == "blm");//var mı
+
+            //    if (result) Console.WriteLine("id bilgisi abs olan tür vardır");
+            //    else Console.WriteLine("id bilgisi abs olan tür yoktur");
+
+            //    if (result2) Console.WriteLine("id bilgisi blm olan tür vardır");
+            //    else Console.WriteLine("id bilgisi blm olan tür yoktur");
+
+            //    Console.ReadLine();
+
+            //} 
+            #endregion
+
+            #region Aggregate,Groupby
             using (var db = new AppContext())
             {
-                //ANY => parantezleri içine yazılan expression sağlanıyorsa true sağlanmıyorsa false döner
+                //Aggregate Functions
+                //count -min/max-sum
 
-                var result = db.Gendres.Any(a => a.Id == "abs");//var mı
-                var result2 = db.Gendres.Any(a => a.Id == "blm");//var mı
+                // tüm kitapların sayısını bulunuz.
 
-                if (result) Console.WriteLine("id bilgisi abs olan tür vardır");
-                else Console.WriteLine("id bilgisi abs olan tür yoktur");
+                int result = db.Books.Count(a => a.Price < 500);
+                int result2 = db.Books.Count();
 
-                if (result2) Console.WriteLine("id bilgisi blm olan tür vardır");
-                else Console.WriteLine("id bilgisi blm olan tür yoktur");
+                // en yüksek ve en düşük kitap fiyatını bulunuz
+
+                var min = db.Books.Min();//kitap döndürür
+                var max = db.Books.Max(a => a.Price); //en yüksek kitap fiyatını döndürür
+
+                var list = db.Books.Where(a => a.Price == db.Books.Max(b => b.Price)).ToList();
+
+                // grup by => ilgili kolona göre gruplama yapar. ilişkili tablolarda veri çekme yöntemine göre include gerekebilir..
+
+                // 2 den fazla kitap yazmış olan yazarları getiriniz
+
+                //a.Key == neye göre grupluyorsan onu alıyor
+
+                var resultList = db.BookAuthors.GroupBy(a => a.Author.FullName)
+                                            .Select(a => new { YazarAdı = a.Key, KitapSayisi = a.Count() })
+                                            .Where(a => a.KitapSayisi >= 2).OrderByDescending(a => a.KitapSayisi).ToList();
+
+                foreach (var item in resultList)
+                {
+                    Console.WriteLine(item.YazarAdı + " * " + item.KitapSayisi);
+                }
+
+                Console.ReadLine();
+
+                //kategori adlarına göre kitapların toplam tutarlarını bulunuz.
+                // macere kitapların toplamı budur bilimin toplamı budur gibi
+
+                var resultList2 = db.Books.GroupBy(a => a.Gendre.Name)
+                                    .Select(b => new { Tur = b.Key, ToplamFiyat = b.Sum(a => a.Price) }).ToList();
+
+                foreach (var item in resultList2)
+                {
+                    Console.WriteLine(item.Tur + " * " + item.ToplamFiyat);
+                }
 
                 Console.ReadLine();
 
             } 
             #endregion
-
         }
     }
 }
