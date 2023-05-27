@@ -132,20 +132,39 @@ namespace LinqToSql
 
 
             #region Take
+            //using (var db = new AppContext())
+            //{
+            //    //TAKE(n) => almak, n: kaç adet eleman alınacak
+
+            //    //Fiyatı en yüksek olan 5 kitabı bulunuz ve sadece kitap adı ve fiyatını desc olarak sıralı getiriniz.
+
+            //    var list = db.Books.Take(5).OrderByDescending(a => a.Price).Select(a => new { a.Title, a.Price }).ToList();
+
+            //    foreach (var item in list)
+            //    {
+            //        Console.WriteLine(item.Title + " * " + item.Price);
+            //    }
+
+            //    Console.ReadLine();
+            //} 
+            #endregion
+
+            #region Any
             using (var db = new AppContext())
             {
-                //TAKE(n) => almak, n: kaç adet eleman alınacak
+                //ANY => parantezleri içine yazılan expression sağlanıyorsa true sağlanmıyorsa false döner
 
-                //Fiyatı en yüksek olan 5 kitabı bulunuz ve sadece kitap adı ve fiyatını desc olarak sıralı getiriniz.
+                var result = db.Gendres.Any(a => a.Id == "abs");//var mı
+                var result2 = db.Gendres.Any(a => a.Id == "blm");//var mı
 
-                var list = db.Books.Take(5).OrderByDescending(a => a.Price).Select(a => new { a.Title, a.Price }).ToList();
+                if (result) Console.WriteLine("id bilgisi abs olan tür vardır");
+                else Console.WriteLine("id bilgisi abs olan tür yoktur");
 
-                foreach (var item in list)
-                {
-                    Console.WriteLine(item.Title + " * " + item.Price);
-                }
+                if (result2) Console.WriteLine("id bilgisi blm olan tür vardır");
+                else Console.WriteLine("id bilgisi blm olan tür yoktur");
 
                 Console.ReadLine();
+
             } 
             #endregion
 
